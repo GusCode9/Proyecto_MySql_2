@@ -1,0 +1,45 @@
+drop schema proyecto;
+
+CREATE schema proyecto;
+
+use proyecto;
+-- -----------------------------
+-- TABLA COCHES  (tabla de hecho)
+-- -----------------------------
+
+CREATE TABLE IF NOT EXISTS COCHES(
+ID_COCHE VARCHAR (100),
+REGION VARCHAR (100),
+PRECIO VARCHAR (100),
+ANIO VARCHAR (100),
+MARCA VARCHAR (100),
+MODELO VARCHAR (100),
+CILINDROS VARCHAR (100),
+COMBUSTIBLE VARCHAR (100),
+KILOMETRAJE VARCHAR (100),
+TRANSMISION VARCHAR (100),
+VIN VARCHAR (100),
+TRACCION VARCHAR (100),
+TIPO VARCHAR (100),
+COLOR_PINTURA VARCHAR (100),
+DESCRIPCION VARCHAR (1000),
+COUNTY VARCHAR (100),
+ESTADO VARCHAR (100),
+FECHA_PUBLICACION VARCHAR (100),
+ID_TIPO_TRANSM VARCHAR (100),
+ID_TIPO VARCHAR (100)
+);
+-- -------------------------------------------
+-- INGESTA DE DATOS EN LA TABLA DE HECHO COCHES
+
+LOAD DATA INFILE  "C:/Users/Agdel/Downloads/SQL/Coder/Bloque 12 - Entrega Trabajo final/dataset/Dataset_Coches1.csv" 
+-- IMPORTANTE ! → CAMBIAR RUTA DE SEGUN ARCHIVO DONDE ESTE UBICADO
+
+INTO TABLE coches
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;   
+-- -------------------------------------------
+-- -------------------------------------------
+
+

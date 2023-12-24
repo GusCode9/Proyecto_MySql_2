@@ -1,0 +1,43 @@
+
+**************************
+**************************
+*** ORDEN EDE EJECUCION***
+**************************
+**************************
+#############################################################################################################
+
+En este archivo se ennumera el orden de ejecucion de archivos .SQL para la instalacion correcta de la base 
+de datos llamada "proyecto" .
+
+-- Primero debes ingresar a la carpeta Proyecto Final y luego ejecutar los archivos en el siguiente orden:
+
+--------------------------------------------------------------------------------------------------------
+0 -- Creacion de base de datos y la tabla de hecho coches: se crea la base de datos que contiene
+todas las tablas, y se crea la tabla de hecho donde se hace la ingesta del dataset "Dataset_Coches.csv"
+de la carpeta dataset en el archivo.
+--------------------------------------------------------------------------------------------------------
+1 -- Creacion de la tabla madre y las tablas hijas: se crea la tabla madre auto y sus hijas en base a la
+tabla de hecho coches.
+--------------------------------------------------------------------------------------------------------
+2 -- Vistas : Permite obtener consultas simplificadas de consulta estadistica de la base de datos
+--------------------------------------------------------------------------------------------------------
+3 -- Funciones : Contiene dos funciones, para devolver valores, *Contar num de modelos por marca* y 
+    *Obtener el Modelo Más Caro* .
+--------------------------------------------------------------------------------------------------------
+4 --Procedimientos almacenados: 
+--------------------------------------------------------------------------------------------------------
+5 --Triggers : Se crean disparadores que ejecutan funciones  de forma automatica.
+--------------------------------------------------------------------------------------------------------
+6 -- Creacion de Usuarios : se crean 2 usuarios , uno para lectura y otro para lectura y edicion.
+--------------------------------------------------------------------------------------------------------
+7 -- Diagrama Entidad Relacion -- ya está realizado , se pueden visualizar todos los objetos creados de
+0 al 6.
+--------------------------------------------------------------------------------------------------------
+8 -- DML + TCL : son sentencias donde se actualizan datos, insertan nuevos o se borran .
+--------------------------------------------------------------------------------------------------------
+9 --Backup -- Si se ejecuta se crea una copia de seguridad de la base de datos, con estructura y datos
+de las tablas contenidas en dicha base de datos. 
+--------------------------------------------------------------------------------------------------------
+
+#############################################################################################################
+
